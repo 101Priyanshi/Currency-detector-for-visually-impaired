@@ -67,13 +67,58 @@ A use case diagram iis a representation of a user's interaction with the system 
 * Non- currency image scanned (the model will still give some label to the image even if it is not a currency image)<br/>
 * The currency may be torn (i.e. it may be in a bad condition)  <br/>
 
+## USER STORY
+
+| IDENTIFIER|                USER STORY                       | POINTS |
+|:---------:|:-----------------------------------------------:|:------:|
+|   Req 01  |          Identify currency note                 |   10   |
+|   Req 02  |Generate audio output for the detected currency  |   10   |
+|   Req 03  |          User gives login details               |   6    |
+|   Req 04  |          Detect torn currency                   |   3    |
+|   Req 05  |          Detect fake currency                   |   3    |
+
+
+
+
 ## NATURAL LANGUAGE
 
 i. Once the user logs in, the system asks for the image of the currency or an already scanned one. <br/>
 ii. Once the user uploads, image is sent for processing where the system has a trained Machine Learning model which processes the image and gives the value of the currency as its output<br/>
 iii. Based on this value,  voice is generated from the audio dataset and given as the output to the user.<br/>
 iv. Taken image or scanned copy is again added to the dataset along with the label i.e value of currency for further usage.
+ ## STRUCTURED SPECIFICATION
+ * Function: Detect currency.
 
+* Description: Detection of currency for blind people.
+
+* Inputs: Scanned image of the currency , Currency Dataset .
+
+* Source : Image of the Currency from the user, Images of all types of Currencies in a Dataset
+
+* Output : Value of the currency in audio format.
+
+* Destination: Value of the currency.
+
+* Action : Using the Image taken as Input from the user and processing it using a Machine Learning   
+ Algorithm, its value is predicted. Based on the value predicted, voice is generated and given as Output
+
+* Requirements : Image Dataset which contains a large set of images of all types of currencies along with their labels to train the Machine Learning Algorithm and to compare while testing. Voice Dataset to give voice output.
+
+* Precondition:     Image scanned by the user should be a currency and should be identifiable.
+		Image scanned by the user should be clear.
+		Image scanned by the user should be not more than 1.5 MB.
+
+* PostCondition: Taken image is added to the Image Dataset along with the labels so that can be used later
+
+* Side Effects: None
+
+## TABULAR FORMAT
+|               Condition                |                  Action              |
+|:-------------------------------------: |:------------------------------------:|
+|       Captured Image pixel > 2 MP      |Image accepted for further processing |
+|       Captured Image pixel < 2 MP      |Image rejected and asked to scan again|
+|Captured Image (Real and good condition)|Sent for processing                   |
+|        No Exception (Fake Notes)       |Audio Output of scanned currency      |
 
 
 
