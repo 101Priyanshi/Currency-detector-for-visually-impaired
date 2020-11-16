@@ -15,21 +15,21 @@ To build a currency detector app for visually impaired people
   * getLoginDetails() : retrieves the login details of the user
 ### CURRENCY CLASS
 * #### Attributes :
-  *Value : value of the currency
+  * Value : value of the currency
 
 * #### Operations :
   * getValue() : retrieves the value of the currency from database.  
 
 ### PREDICT CLASS (ASSOCIATION CLASS)
  * #### Attributes :
-  * valuePredicted : value of the currency detected by the app using the image uploaded
+   * valuePredicted : value of the currency detected by the app using the image uploaded
 
 
 
  * #### Operations :
-  * scanPhoto() : User scans the Currency<br/>
-  * predctCurrency() : App detects the currency and predict the value of the currency<br/>
-  * displayOutput() : Voice is generated and played which says the value of the currency whose image is taken. <br/>
+   * scanPhoto() : User scans the Currency<br/>
+   * predctCurrency() : App detects the currency and predict the value of the currency<br/>
+   * displayOutput() : Voice is generated and played which says the value of the currency whose image is taken. <br/>
 
 ## OBJECT DIAGRAM
 * Object Diagrams represent an instance of Class Diagram.<br/>
