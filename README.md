@@ -6,27 +6,27 @@ To build a currency detector app for visually impaired people
 * A class diagram in the Unified Modeling Language is a type of static structure diagram that describes the structure of a system by showing the system's classes, their attributes, operations, and the relationships among objects.<br/>
 * In our Problem, we have two classes named ‘User’ and ‘Currency’ whose multiplicity is many -to-many, and an Association Class named ‘Predict’ .<br/>
 ### USER CLASS
-* #### Attributes : 
+#### Attributes : 
 email<br/>
 username<br/>
 password<br/>
 
-* #### Operations :
+#### Operations :
 getLoginDetails() : retrieves the login details of the user
 ### CURRENCY CLASS
-* #### Attributes :
+#### Attributes :
 Value : value of the currency
 
-* #### Operations :
+#### Operations :
 getValue() : retrieves the value of the currency from database.  
 
 ### PREDICT CLASS (ASSOCIATION CLASS)
-* #### Attributes :
+ #### Attributes :
 valuePredicted : value of the currency detected by the app using the image uploaded
 
 
 
-* #### Operations :
+ #### Operations :
   * scanPhoto() : User scans the Currency<br/>
   * predctCurrency() : App detects the currency and predict the value of the currency<br/>
   * displayOutput() : Voice is generated and played which says the value of the currency whose image is taken. <br/>
