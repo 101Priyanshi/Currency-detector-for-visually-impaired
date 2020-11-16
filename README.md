@@ -1,5 +1,5 @@
 
-### The mdj files were created in StarUML
+### NOTE: The mdj files were created in StarUML
 ## PROBLEM STATEMENT
 To build a currency detector app for visually impaired people
 ## CLASS DIAGRAM
@@ -17,7 +17,7 @@ getLoginDetails() : retrieves the login details of the user
 #### Attributes :
 Value : value of the currency
 
-#### Operation :
+#### Operations :
 getValue() : retrieves the value of the currency from database.  
 
 ### PREDICT CLASS (ASSOCIATION CLASS)
